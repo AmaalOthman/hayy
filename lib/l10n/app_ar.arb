@@ -28,6 +28,23 @@
   "stillPending": "حسابك ما زال قيد المراجعة. سنُعلمك فور اعتماده.",
   "logout": "تسجيل الخروج",
 
+  "completeProfileTitle": "أكمل ملفك الشخصي",
+  "completeProfileSubtitle": "يظهر ملفك للوسطاء مع كل منشور تشاركه، ويستخدمه فريقنا لاعتماد حسابك.",
+  "editProfileTitle": "تعديل الملف الشخصي",
+  "fullNameLabel": "الاسم الكامل",
+  "agencyLabel": "اسم الوكالة",
+  "whatsappLabel": "رقم واتساب",
+  "whatsappHelper": "سيتواصل معك الوسطاء على هذا الرقم.",
+  "addPhoto": "إضافة صورة",
+  "changePhoto": "تغيير الصورة",
+  "photoFromCamera": "التقاط صورة",
+  "photoFromGallery": "اختيار من المعرض",
+  "saveAndContinue": "حفظ ومتابعة",
+  "save": "حفظ",
+  "profileSaved": "تم حفظ الملف الشخصي",
+  "errorFullName": "أدخل اسمك الكامل",
+  "errorAgency": "أدخل اسم الوكالة",
+
   "homeTitle": "المجتمعات",
   "homeEmpty": "ستظهر هنا المجتمعات التي تنضم إليها.",
 

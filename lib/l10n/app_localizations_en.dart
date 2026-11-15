@@ -83,6 +83,55 @@ class AppLocalizationsEn extends AppLocalizations {
   String get logout => 'Log out';
 
   @override
+  String get completeProfileTitle => 'Complete your profile';
+
+  @override
+  String get completeProfileSubtitle =>
+      'Brokers see this on every post you share, and our team uses it to approve your account.';
+
+  @override
+  String get editProfileTitle => 'Edit profile';
+
+  @override
+  String get fullNameLabel => 'Full name';
+
+  @override
+  String get agencyLabel => 'Agency name';
+
+  @override
+  String get whatsappLabel => 'WhatsApp number';
+
+  @override
+  String get whatsappHelper => 'Brokers will contact you on this number.';
+
+  @override
+  String get addPhoto => 'Add photo';
+
+  @override
+  String get changePhoto => 'Change photo';
+
+  @override
+  String get photoFromCamera => 'Take a photo';
+
+  @override
+  String get photoFromGallery => 'Choose from gallery';
+
+  @override
+  String get saveAndContinue => 'Save and continue';
+
+  @override
+  String get save => 'Save';
+
+  @override
+  String get profileSaved => 'Profile saved';
+
+  @override
+  String get errorFullName => 'Enter your full name';
+
+  @override
+  String get errorAgency => 'Enter your agency name';
+
+  @override
   String get homeTitle => 'Communities';
 
   @override

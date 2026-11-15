@@ -9,6 +9,7 @@ import '../../features/auth/presentation/pages/splash_page.dart';
 import '../../features/auth/presentation/providers/auth_controller.dart';
 import '../../features/auth/presentation/providers/auth_state.dart';
 import '../../features/communities/presentation/pages/home_page.dart';
+import '../../features/profile/presentation/pages/edit_profile_page.dart';
 import 'route_names.dart';
 
 final appRouterProvider = Provider<GoRouter>((ref) {
@@ -39,6 +40,11 @@ final appRouterProvider = Provider<GoRouter>((ref) {
             OtpVerificationPage(phone: state.extra! as String),
       ),
       GoRoute(
+        path: RouteNames.completeProfile,
+        pageBuilder: (context, state) =>
+            _fade(state, const EditProfilePage(isOnboarding: true)),
+      ),
+      GoRoute(
         path: RouteNames.pendingApproval,
         pageBuilder: (context, state) =>
             _fade(state, const PendingApprovalPage()),
@@ -64,18 +70,24 @@ String? authRedirect(AuthState auth, String location) {
   if (location == RouteNames.splash) return null;
 
   const signedOutRoutes = {RouteNames.login, RouteNames.otp};
+  const onboardingRoutes = {
+    ...signedOutRoutes,
+    RouteNames.completeProfile,
+    RouteNames.pendingApproval,
+  };
+  String? only(String route) => location == route ? null : route;
+
+  // Sign up → complete profile → admin approval → app.
   return switch (auth) {
     AuthUnknown() => RouteNames.splash,
     Unauthenticated() =>
       signedOutRoutes.contains(location) ? null : RouteNames.login,
+    Authenticated(:final session) when !session.hasProfile =>
+      only(RouteNames.completeProfile),
     Authenticated(:final session) when !session.isApproved =>
-      location == RouteNames.pendingApproval
-          ? null
-          : RouteNames.pendingApproval,
-    Authenticated() => signedOutRoutes.contains(location) ||
-            location == RouteNames.pendingApproval
-        ? RouteNames.home
-        : null,
+      only(RouteNames.pendingApproval),
+    Authenticated() =>
+      onboardingRoutes.contains(location) ? RouteNames.home : null,
   };
 }
 

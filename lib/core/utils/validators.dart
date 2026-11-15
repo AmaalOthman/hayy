@@ -14,6 +14,9 @@ abstract final class Validators {
       national.length == country.nationalLength &&
       country.mobilePrefixes.any(national.startsWith);
 
+  /// At least two words would exclude single-name brokers; 3 chars is enough.
+  static bool isValidName(String? name) => (name?.trim().length ?? 0) >= 3;
+
   static bool isValidOtp(String code) =>
       code.length == AppConstants.otpLength && !code.contains(_nonDigits);
 }

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../../../../core/constants/phone_countries.dart';
-import '../../../../core/theme/theme.dart';
+import '../constants/phone_countries.dart';
+import '../theme/theme.dart';
 
 /// Mobile number with a country picker. Always laid out left-to-right,
 /// even in Arabic, because phone numbers read LTR.

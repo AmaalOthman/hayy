@@ -1,4 +1,3 @@
-/// Countries a broker can sign up from. UAE first: Hayy launches in Dubai.
 class PhoneCountry {
   const PhoneCountry({
     required this.isoCode,
@@ -12,13 +11,11 @@ class PhoneCountry {
   final String dialCode;
   final String flag;
 
-  /// Digits after the country code, without the leading 0.
   final int nationalLength;
 
-  /// First digit(s) of a valid mobile number, e.g. UAE mobiles start with 5.
   final List<String> mobilePrefixes;
 
-  /// `0501234567` → `+971501234567`
+  /// 0501234567    ,   +971501234567
   String toE164(String national) => '+$dialCode$national';
 }
 
@@ -46,4 +43,14 @@ abstract final class PhoneCountries {
   );
 
   static const List<PhoneCountry> all = [uae, saudi, egypt];
+
+  static (PhoneCountry, String) split(String? e164) {
+    if (e164 != null) {
+      for (final c in all) {
+        final prefix = '+${c.dialCode}';
+        if (e164.startsWith(prefix)) return (c, e164.substring(prefix.length));
+      }
+    }
+    return (uae, '');
+  }
 }

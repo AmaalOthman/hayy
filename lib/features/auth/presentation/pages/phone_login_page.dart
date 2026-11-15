@@ -11,7 +11,7 @@ import '../../../../core/theme/theme.dart';
 import '../../../../core/utils/validators.dart';
 import '../../../../l10n/app_localizations.dart';
 import '../providers/auth_controller.dart';
-import '../widgets/phone_input_field.dart';
+import '../../../../core/widgets/phone_input_field.dart';
 import 'splash_page.dart' show hayyLogoHeroTag;
 
 class PhoneLoginPage extends ConsumerStatefulWidget {
@@ -154,7 +154,6 @@ class _PhoneLoginPageState extends ConsumerState<PhoneLoginPage> {
   }
 }
 
-/// Skyline photo fading into the cream page, with the logo from the splash.
 class _Header extends StatelessWidget {
   const _Header({required this.height});
   final double height;
