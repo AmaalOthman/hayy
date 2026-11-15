@@ -1,6 +1,4 @@
 abstract final class AppConstants {
-  /// A post can be reposted once this has passed since the original post or
-  /// the last repost. The UI uses it to show the countdown; the server enforces it.
   static const Duration repostCooldown = Duration(days: 3);
 
   // Network

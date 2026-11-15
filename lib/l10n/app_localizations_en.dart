@@ -135,7 +135,124 @@ class AppLocalizationsEn extends AppLocalizations {
   String get homeTitle => 'Communities';
 
   @override
-  String get homeEmpty => 'Communities you join will appear here.';
+  String get homeSubtitle => 'Brokers community';
+
+  @override
+  String get navCommunities => 'Communities';
+
+  @override
+  String get navSearch => 'Search';
+
+  @override
+  String get navNewPost => 'New post';
+
+  @override
+  String get navMyPosts => 'My posts';
+
+  @override
+  String get navProfile => 'Profile';
+
+  @override
+  String get communitiesEmptyTitle => 'No communities yet';
+
+  @override
+  String get communitiesEmptyBody =>
+      'Join the neighbourhoods you work in to see their listings and requests here.';
+
+  @override
+  String get exploreTitle => 'Explore communities';
+
+  @override
+  String exploreSubtitle(int count) {
+    return '$count communities across Dubai';
+  }
+
+  @override
+  String get searchCommunitiesHint => 'Search neighbourhoods';
+
+  @override
+  String get noCommunitiesFound => 'No communities match your search.';
+
+  @override
+  String get noPostsYet => 'No posts yet';
+
+  @override
+  String memberCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count brokers',
+      one: '1 broker',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get join => 'Join';
+
+  @override
+  String get joined => 'Joined';
+
+  @override
+  String get leave => 'Leave community';
+
+  @override
+  String leftCommunity(String name) {
+    return 'You left $name';
+  }
+
+  @override
+  String get undo => 'Undo';
+
+  @override
+  String get mute => 'Mute notifications';
+
+  @override
+  String get unmute => 'Unmute notifications';
+
+  @override
+  String get muted => 'Muted';
+
+  @override
+  String get filterAll => 'All';
+
+  @override
+  String get transactionSale => 'Sale';
+
+  @override
+  String get transactionRental => 'Rental';
+
+  @override
+  String get useResidential => 'Residential';
+
+  @override
+  String get useCommercial => 'Commercial';
+
+  @override
+  String get postTypeListing => 'Listing';
+
+  @override
+  String get postTypeRequest => 'Request';
+
+  @override
+  String get postTypeViewing => 'Viewing';
+
+  @override
+  String get yesterday => 'Yesterday';
+
+  @override
+  String get feedEmpty =>
+      'No posts in this community yet. Be the first to share a listing or a request.';
+
+  @override
+  String get newPostTitle => 'New post';
+
+  @override
+  String get newPostNext => 'The guided post form is the next step.';
+
+  @override
+  String get myPostsEmpty =>
+      'Posts you share will appear here, with repost and edit options.';
 
   @override
   String get errorNetwork => 'No internet connection.';

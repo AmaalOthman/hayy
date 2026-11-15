@@ -4,8 +4,6 @@ import 'package:flutter/services.dart';
 import '../../../../core/constants/app_constants.dart';
 import '../../../../core/theme/theme.dart';
 
-/// One box per digit, backed by a single invisible TextField so paste,
-/// backspace and iOS SMS autofill all behave natively.
 class OtpInputField extends StatefulWidget {
   const OtpInputField({
     super.key,
@@ -45,7 +43,6 @@ class _OtpInputFieldState extends State<OtpInputField> {
 
   void _rebuild() => setState(() {});
 
-  /// The controller also notifies on cursor moves; fire once per full code.
   String? _lastCompleted;
 
   void _onChanged() {

@@ -133,7 +133,128 @@ class AppLocalizationsAr extends AppLocalizations {
   String get homeTitle => 'المجتمعات';
 
   @override
-  String get homeEmpty => 'ستظهر هنا المجتمعات التي تنضم إليها.';
+  String get homeSubtitle => 'مجتمع الوسطاء';
+
+  @override
+  String get navCommunities => 'المجتمعات';
+
+  @override
+  String get navSearch => 'بحث';
+
+  @override
+  String get navNewPost => 'منشور جديد';
+
+  @override
+  String get navMyPosts => 'منشوراتي';
+
+  @override
+  String get navProfile => 'حسابي';
+
+  @override
+  String get communitiesEmptyTitle => 'لم تنضم لأي مجتمع بعد';
+
+  @override
+  String get communitiesEmptyBody =>
+      'انضم إلى المناطق التي تعمل بها لتظهر هنا عروضها وطلباتها.';
+
+  @override
+  String get exploreTitle => 'استكشف المجتمعات';
+
+  @override
+  String exploreSubtitle(int count) {
+    return '$count مجتمعاً في دبي';
+  }
+
+  @override
+  String get searchCommunitiesHint => 'ابحث عن منطقة';
+
+  @override
+  String get noCommunitiesFound => 'لا توجد مجتمعات مطابقة لبحثك.';
+
+  @override
+  String get noPostsYet => 'لا توجد منشورات بعد';
+
+  @override
+  String memberCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count وسيط',
+      many: '$count وسيطاً',
+      few: '$count وسطاء',
+      two: 'وسيطان',
+      one: 'وسيط واحد',
+      zero: 'لا يوجد وسطاء',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get join => 'انضمام';
+
+  @override
+  String get joined => 'منضم';
+
+  @override
+  String get leave => 'مغادرة المجتمع';
+
+  @override
+  String leftCommunity(String name) {
+    return 'غادرت $name';
+  }
+
+  @override
+  String get undo => 'تراجع';
+
+  @override
+  String get mute => 'كتم الإشعارات';
+
+  @override
+  String get unmute => 'إلغاء كتم الإشعارات';
+
+  @override
+  String get muted => 'مكتوم';
+
+  @override
+  String get filterAll => 'الكل';
+
+  @override
+  String get transactionSale => 'بيع';
+
+  @override
+  String get transactionRental => 'إيجار';
+
+  @override
+  String get useResidential => 'سكني';
+
+  @override
+  String get useCommercial => 'تجاري';
+
+  @override
+  String get postTypeListing => 'عرض';
+
+  @override
+  String get postTypeRequest => 'طلب';
+
+  @override
+  String get postTypeViewing => 'معاينة';
+
+  @override
+  String get yesterday => 'أمس';
+
+  @override
+  String get feedEmpty =>
+      'لا توجد منشورات في هذا المجتمع بعد. كن أول من يشارك عرضاً أو طلباً.';
+
+  @override
+  String get newPostTitle => 'منشور جديد';
+
+  @override
+  String get newPostNext => 'نموذج إنشاء المنشور هو الخطوة التالية.';
+
+  @override
+  String get myPostsEmpty =>
+      'ستظهر هنا منشوراتك مع خيارات إعادة النشر والتعديل.';
 
   @override
   String get errorNetwork => 'لا يوجد اتصال بالإنترنت.';

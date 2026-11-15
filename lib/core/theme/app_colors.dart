@@ -19,6 +19,8 @@ abstract final class AppColors {
   static const Color backgroundEnd = Color(0xFFF6EFEB);
   static const Color ink = Color(0xFF1A212E);
   static const Color textSecondary = Color(0xFF5F6676); // (added)
+  /// Copper dark enough for small text on light surfaces (≈6:1). (added)
+  static const Color copperText = Color(0xFF7A5440);
   static const Color white = Color(0xFFFFFFFF);
 
   // Semantic
@@ -29,7 +31,7 @@ abstract final class AppColors {
   static const Color listingBg = Color(0xFFDDE3EE);
   static const Color listingFg = duskBlue;
   static const Color requestBg = Color(0xFFEFE0D5);
-  static const Color requestFg = Color(0xFF7A5440);
+  static const Color requestFg = copperText;
   static const Color viewingBg = Color(0xFFDCEBE3);
   static const Color viewingFg = Color(0xFF3F6B57);
 

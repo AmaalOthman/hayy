@@ -11,12 +11,8 @@ import '../../../../core/theme/theme.dart';
 import '../../../../l10n/app_localizations.dart';
 import '../providers/auth_controller.dart';
 
-/// Shared with the login header so the logo glides between the two screens.
 const String hayyLogoHeroTag = 'hayy-logo';
 
-/// Cinematic intro: the Dubai skyline fades in with a slow zoom, the copper
-/// logo comes into focus, a light streak sweeps across it, then the tagline.
-/// The session check runs in parallel; we leave once both are done.
 class SplashPage extends ConsumerStatefulWidget {
   const SplashPage({super.key});
 
@@ -31,7 +27,6 @@ class _SplashPageState extends ConsumerState<SplashPage>
     duration: const Duration(milliseconds: 2800),
   );
 
-  /// Slow Ken Burns zoom on the photo, independent of the intro timing.
   late final AnimationController _ambient = AnimationController(
     vsync: this,
     duration: const Duration(seconds: 8),
@@ -45,7 +40,6 @@ class _SplashPageState extends ConsumerState<SplashPage>
     super.didChangeDependencies();
     if (_started) return;
     _started = true;
-    // Decode the images before the first animated frame so nothing pops in.
     precacheImage(const AssetImage(AppAssets.heroBackground), context);
     precacheImage(const AssetImage(AppAssets.logo), context);
     if (MediaQuery.disableAnimationsOf(context)) {
@@ -61,7 +55,7 @@ class _SplashPageState extends ConsumerState<SplashPage>
     try {
       await _intro.forward().orCancel;
     } on TickerCanceled {
-      return; // disposed mid-animation
+      return; 
     }
     _finish(await session == null);
   }
@@ -74,7 +68,6 @@ class _SplashPageState extends ConsumerState<SplashPage>
 
   void _finish(bool ok) {
     if (!mounted) return;
-    // The router redirect picks the real destination (login, pending, home).
     ok ? context.go(RouteNames.home) : setState(() => _failed = true);
   }
 
@@ -185,7 +178,6 @@ class _SplashPageState extends ConsumerState<SplashPage>
     );
   }
 
-  /// Darkens the photo so the copper logo and text stay readable.
   static const LinearGradient _scrim = LinearGradient(
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
@@ -209,7 +201,6 @@ class _AnimatedLogo extends StatelessWidget {
   Widget build(BuildContext context) {
     Widget logo = Image.asset(AppAssets.logo, width: 168);
 
-    // Metallic light streak while 0 < sweep < 1.
     if (sweep > 0 && sweep < 1) {
       logo = ShaderMask(
         blendMode: BlendMode.srcATop,

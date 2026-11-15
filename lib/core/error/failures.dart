@@ -2,8 +2,6 @@ import 'package:equatable/equatable.dart';
 
 import 'exceptions.dart';
 
-/// What the domain and UI layers receive instead of exceptions.
-/// `sealed`, so a `switch` over a Failure must handle every case.
 sealed class Failure extends Equatable {
   const Failure(this.message);
 
@@ -33,7 +31,6 @@ final class ServerFailure extends Failure {
   final int? statusCode;
   final String? code;
 
-  /// Raw error body, for extra fields such as `availableAt`.
   final Object? data;
 
   @override

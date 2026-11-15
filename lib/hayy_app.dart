@@ -21,13 +21,47 @@ class HayyApp extends ConsumerWidget {
       supportedLocales: AppLocalizations.supportedLocales,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       builder: ApiEndpoints.useMockApi
-          ? (context, child) => Banner(
-                message: 'MOCK',
-                location: BannerLocation.bottomStart,
-                color: AppColors.mutedCopper,
-                child: child!,
+          ? (context, child) => Stack(
+                children: [child!, const _MockApiLabel()],
               )
           : null,
     );
   }
+}
+
+/// Tiny "MOCK API" pill under the status bar so a mock build is never
+/// mistaken for the real backend. Ignores touches; covers no controls.
+class _MockApiLabel extends StatelessWidget {
+  const _MockApiLabel();
+
+  @override
+  Widget build(BuildContext context) => Positioned(
+        top: MediaQuery.paddingOf(context).top + 2,
+        left: 0,
+        right: 0,
+        child: IgnorePointer(
+          child: Center(
+            child: DecoratedBox(
+              decoration: BoxDecoration(
+                color: AppColors.ink.withValues(alpha: 0.55),
+                borderRadius: BorderRadius.circular(6),
+              ),
+              child: const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 6, vertical: 1),
+                child: Text(
+                  'MOCK API',
+                  textDirection: TextDirection.ltr,
+                  style: TextStyle(
+                    color: AppColors.white,
+                    fontSize: 9,
+                    fontWeight: FontWeight.w700,
+                    letterSpacing: 1,
+                    decoration: TextDecoration.none,
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
+      );
 }

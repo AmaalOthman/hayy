@@ -5,6 +5,7 @@ import 'package:dio/dio.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../constants/api_endpoints.dart';
+import 'mock_communities.dart';
 
 typedef _Reply = (int status, Object? body);
 
@@ -99,6 +100,12 @@ class MockApiAdapter implements HttpClientAdapter {
         final broker = _authorizedBroker(o, db);
         if (broker == null) return _error(401, 'Unauthorized', 'unauthorized');
         return _updateProfile(o, broker);
+    }
+
+    final broker = _authorizedBroker(o, db);
+    if (broker != null) {
+      final reply = MockCommunities.handle(o, broker);
+      if (reply != null) return reply;
     }
     return _error(404, 'Mock API: no handler for ${o.method} ${o.path}',
         'not_found');

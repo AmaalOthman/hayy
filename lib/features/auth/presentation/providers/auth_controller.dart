@@ -23,8 +23,6 @@ final logoutProvider =
 final authControllerProvider =
     NotifierProvider<AuthController, AuthState>(AuthController.new);
 
-/// Single source of truth for "who is signed in". The router listens to it.
-/// Actions return a [Failure] (or null on success) for the page to display.
 class AuthController extends Notifier<AuthState> {
   @override
   AuthState build() {
@@ -36,8 +34,6 @@ class AuthController extends Notifier<AuthState> {
     return const AuthUnknown();
   }
 
-  /// Loads the stored session from the server. On failure the state is left
-  /// unchanged, so the caller can offer a retry.
   Future<Failure?> checkSession() async {
     final result = await ref.read(getCurrentSessionProvider)(const NoParams());
     if (result case Ok(:final value)) {

@@ -1,7 +1,5 @@
 import 'broker_model.dart';
 
-/// `POST /auth/otp/verify` body:
-/// `{"accessToken": "...", "refreshToken": "...", "broker": {...}}`.
 class AuthSessionModel {
   const AuthSessionModel({
     required this.accessToken,

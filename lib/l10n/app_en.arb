@@ -49,7 +49,54 @@
   "errorAgency": "Enter your agency name",
 
   "homeTitle": "Communities",
-  "homeEmpty": "Communities you join will appear here.",
+  "homeSubtitle": "Brokers community",
+
+  "navCommunities": "Communities",
+  "navSearch": "Search",
+  "navNewPost": "New post",
+  "navMyPosts": "My posts",
+  "navProfile": "Profile",
+
+  "communitiesEmptyTitle": "No communities yet",
+  "communitiesEmptyBody": "Join the neighbourhoods you work in to see their listings and requests here.",
+  "exploreTitle": "Explore communities",
+  "exploreSubtitle": "{count} communities across Dubai",
+  "@exploreSubtitle": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "searchCommunitiesHint": "Search neighbourhoods",
+  "noCommunitiesFound": "No communities match your search.",
+  "noPostsYet": "No posts yet",
+  "memberCount": "{count, plural, =1{1 broker} other{{count} brokers}}",
+  "@memberCount": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "join": "Join",
+  "joined": "Joined",
+  "leave": "Leave community",
+  "leftCommunity": "You left {name}",
+  "@leftCommunity": {
+    "placeholders": { "name": { "type": "String" } }
+  },
+  "undo": "Undo",
+  "mute": "Mute notifications",
+  "unmute": "Unmute notifications",
+  "muted": "Muted",
+
+  "filterAll": "All",
+  "transactionSale": "Sale",
+  "transactionRental": "Rental",
+  "useResidential": "Residential",
+  "useCommercial": "Commercial",
+  "postTypeListing": "Listing",
+  "postTypeRequest": "Request",
+  "postTypeViewing": "Viewing",
+  "yesterday": "Yesterday",
+
+  "feedEmpty": "No posts in this community yet. Be the first to share a listing or a request.",
+  "newPostTitle": "New post",
+  "newPostNext": "The guided post form is the next step.",
+  "myPostsEmpty": "Posts you share will appear here, with repost and edit options.",
 
   "errorNetwork": "No internet connection.",
   "errorGeneric": "Something went wrong. Please try again.",

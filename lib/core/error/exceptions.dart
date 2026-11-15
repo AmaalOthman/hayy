@@ -1,5 +1,3 @@
-/// Thrown by the data layer only. Repositories catch these (through `guard`)
-/// and turn them into `Failure`s, so domain and presentation never see them.
 sealed class AppException implements Exception {
   const AppException(this.message);
   final String message;
@@ -19,10 +17,8 @@ final class ServerException extends AppException {
 
   final int? statusCode;
 
-  /// Machine-readable code from the backend, e.g. `repost_cooldown`.
   final String? code;
 
-  /// Raw error body, for extra fields such as `availableAt`.
   final Object? data;
 }
 

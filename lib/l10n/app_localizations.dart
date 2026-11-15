@@ -338,11 +338,215 @@ abstract class AppLocalizations {
   /// **'Communities'**
   String get homeTitle;
 
-  /// No description provided for @homeEmpty.
+  /// No description provided for @homeSubtitle.
   ///
   /// In en, this message translates to:
-  /// **'Communities you join will appear here.'**
-  String get homeEmpty;
+  /// **'Brokers community'**
+  String get homeSubtitle;
+
+  /// No description provided for @navCommunities.
+  ///
+  /// In en, this message translates to:
+  /// **'Communities'**
+  String get navCommunities;
+
+  /// No description provided for @navSearch.
+  ///
+  /// In en, this message translates to:
+  /// **'Search'**
+  String get navSearch;
+
+  /// No description provided for @navNewPost.
+  ///
+  /// In en, this message translates to:
+  /// **'New post'**
+  String get navNewPost;
+
+  /// No description provided for @navMyPosts.
+  ///
+  /// In en, this message translates to:
+  /// **'My posts'**
+  String get navMyPosts;
+
+  /// No description provided for @navProfile.
+  ///
+  /// In en, this message translates to:
+  /// **'Profile'**
+  String get navProfile;
+
+  /// No description provided for @communitiesEmptyTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'No communities yet'**
+  String get communitiesEmptyTitle;
+
+  /// No description provided for @communitiesEmptyBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Join the neighbourhoods you work in to see their listings and requests here.'**
+  String get communitiesEmptyBody;
+
+  /// No description provided for @exploreTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Explore communities'**
+  String get exploreTitle;
+
+  /// No description provided for @exploreSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} communities across Dubai'**
+  String exploreSubtitle(int count);
+
+  /// No description provided for @searchCommunitiesHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Search neighbourhoods'**
+  String get searchCommunitiesHint;
+
+  /// No description provided for @noCommunitiesFound.
+  ///
+  /// In en, this message translates to:
+  /// **'No communities match your search.'**
+  String get noCommunitiesFound;
+
+  /// No description provided for @noPostsYet.
+  ///
+  /// In en, this message translates to:
+  /// **'No posts yet'**
+  String get noPostsYet;
+
+  /// No description provided for @memberCount.
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{1 broker} other{{count} brokers}}'**
+  String memberCount(int count);
+
+  /// No description provided for @join.
+  ///
+  /// In en, this message translates to:
+  /// **'Join'**
+  String get join;
+
+  /// No description provided for @joined.
+  ///
+  /// In en, this message translates to:
+  /// **'Joined'**
+  String get joined;
+
+  /// No description provided for @leave.
+  ///
+  /// In en, this message translates to:
+  /// **'Leave community'**
+  String get leave;
+
+  /// No description provided for @leftCommunity.
+  ///
+  /// In en, this message translates to:
+  /// **'You left {name}'**
+  String leftCommunity(String name);
+
+  /// No description provided for @undo.
+  ///
+  /// In en, this message translates to:
+  /// **'Undo'**
+  String get undo;
+
+  /// No description provided for @mute.
+  ///
+  /// In en, this message translates to:
+  /// **'Mute notifications'**
+  String get mute;
+
+  /// No description provided for @unmute.
+  ///
+  /// In en, this message translates to:
+  /// **'Unmute notifications'**
+  String get unmute;
+
+  /// No description provided for @muted.
+  ///
+  /// In en, this message translates to:
+  /// **'Muted'**
+  String get muted;
+
+  /// No description provided for @filterAll.
+  ///
+  /// In en, this message translates to:
+  /// **'All'**
+  String get filterAll;
+
+  /// No description provided for @transactionSale.
+  ///
+  /// In en, this message translates to:
+  /// **'Sale'**
+  String get transactionSale;
+
+  /// No description provided for @transactionRental.
+  ///
+  /// In en, this message translates to:
+  /// **'Rental'**
+  String get transactionRental;
+
+  /// No description provided for @useResidential.
+  ///
+  /// In en, this message translates to:
+  /// **'Residential'**
+  String get useResidential;
+
+  /// No description provided for @useCommercial.
+  ///
+  /// In en, this message translates to:
+  /// **'Commercial'**
+  String get useCommercial;
+
+  /// No description provided for @postTypeListing.
+  ///
+  /// In en, this message translates to:
+  /// **'Listing'**
+  String get postTypeListing;
+
+  /// No description provided for @postTypeRequest.
+  ///
+  /// In en, this message translates to:
+  /// **'Request'**
+  String get postTypeRequest;
+
+  /// No description provided for @postTypeViewing.
+  ///
+  /// In en, this message translates to:
+  /// **'Viewing'**
+  String get postTypeViewing;
+
+  /// No description provided for @yesterday.
+  ///
+  /// In en, this message translates to:
+  /// **'Yesterday'**
+  String get yesterday;
+
+  /// No description provided for @feedEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'No posts in this community yet. Be the first to share a listing or a request.'**
+  String get feedEmpty;
+
+  /// No description provided for @newPostTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'New post'**
+  String get newPostTitle;
+
+  /// No description provided for @newPostNext.
+  ///
+  /// In en, this message translates to:
+  /// **'The guided post form is the next step.'**
+  String get newPostNext;
+
+  /// No description provided for @myPostsEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'Posts you share will appear here, with repost and edit options.'**
+  String get myPostsEmpty;
 
   /// No description provided for @errorNetwork.
   ///

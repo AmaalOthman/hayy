@@ -1,4 +1,4 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
@@ -8,8 +8,14 @@ import '../../features/auth/presentation/pages/phone_login_page.dart';
 import '../../features/auth/presentation/pages/splash_page.dart';
 import '../../features/auth/presentation/providers/auth_controller.dart';
 import '../../features/auth/presentation/providers/auth_state.dart';
+import '../../features/communities/presentation/pages/explore_communities_page.dart';
 import '../../features/communities/presentation/pages/home_page.dart';
+import '../../features/posts/presentation/pages/community_feed_page.dart';
+import '../../features/posts/presentation/pages/create_post_page.dart';
+import '../../features/posts/presentation/pages/my_posts_page.dart';
 import '../../features/profile/presentation/pages/edit_profile_page.dart';
+import '../../features/profile/presentation/pages/profile_page.dart';
+import '../../features/shell/presentation/pages/main_shell_page.dart';
 import 'route_names.dart';
 
 final appRouterProvider = Provider<GoRouter>((ref) {
@@ -49,9 +55,34 @@ final appRouterProvider = Provider<GoRouter>((ref) {
         pageBuilder: (context, state) =>
             _fade(state, const PendingApprovalPage()),
       ),
+      // Bottom navigation: each tab keeps its own stack and scroll position.
+      StatefulShellRoute.indexedStack(
+        pageBuilder: (context, state, shell) =>
+            _fade(state, MainShellPage(shell: shell)),
+        branches: [
+          _tab(RouteNames.home, const HomePage()),
+          _tab(RouteNames.explore, const ExploreCommunitiesPage()),
+          _tab(RouteNames.myPosts, const MyPostsPage()),
+          _tab(RouteNames.profile, const ProfilePage()),
+        ],
+      ),
+      // Full-screen pages pushed above the tabs (no bottom bar).
       GoRoute(
-        path: RouteNames.home,
-        pageBuilder: (context, state) => _fade(state, const HomePage()),
+        path: RouteNames.communityFeedPattern,
+        builder: (context, state) =>
+            CommunityFeedPage(communityId: state.pathParameters['id']!),
+      ),
+      GoRoute(
+        path: RouteNames.newPost,
+        pageBuilder: (context, state) => MaterialPage(
+          key: state.pageKey,
+          fullscreenDialog: true,
+          child: const CreatePostPage(),
+        ),
+      ),
+      GoRoute(
+        path: RouteNames.editProfile,
+        builder: (context, state) => const EditProfilePage(),
       ),
     ],
   );
@@ -90,6 +121,10 @@ String? authRedirect(AuthState auth, String location) {
       onboardingRoutes.contains(location) ? RouteNames.home : null,
   };
 }
+
+StatefulShellBranch _tab(String path, Widget page) => StatefulShellBranch(
+      routes: [GoRoute(path: path, builder: (context, state) => page)],
+    );
 
 CustomTransitionPage<void> _fade(GoRouterState state, Widget child) =>
     CustomTransitionPage<void>(

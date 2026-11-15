@@ -12,12 +12,9 @@ import '../../../../l10n/app_localizations.dart';
 import '../providers/auth_controller.dart';
 import '../widgets/otp_input_field.dart';
 
-/// On success the auth state changes and the router redirect moves on
-/// (pending approval or home); this page doesn't navigate itself.
 class OtpVerificationPage extends ConsumerStatefulWidget {
   const OtpVerificationPage({super.key, required this.phone});
 
-  /// E.164, e.g. +971501234567.
   final String phone;
 
   @override
@@ -192,7 +189,6 @@ class _OtpVerificationPageState extends ConsumerState<OtpVerificationPage> {
   }
 }
 
-/// Icon inside a metallic copper ring, as in the brand palette swatches.
 class _CopperBadge extends StatelessWidget {
   const _CopperBadge({required this.icon});
   final IconData icon;

@@ -2,15 +2,6 @@ import 'dart:developer' as developer;
 
 import 'failures.dart';
 
-/// Either a value ([Ok]) or a [Failure] ([Err]). Every repository method
-/// returns one of these, so callers can't forget to handle errors.
-///
-/// ```dart
-/// switch (await sendOtp(phone)) {
-///   case Ok(:final value): ...
-///   case Err(:final failure): ...
-/// }
-/// ```
 sealed class Result<T> {
   const Result();
 
@@ -46,8 +37,6 @@ final class Err<T> extends Result<T> {
   final Failure failure;
 }
 
-/// Runs [body] and wraps the outcome. Use in repositories:
-/// `Future<Result<Post>> getPost(id) => guard(() => _remote.getPost(id));`
 Future<Result<T>> guard<T>(Future<T> Function() body) async {
   try {
     return Ok(await body());

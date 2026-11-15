@@ -9,9 +9,6 @@ import '../../domain/entities/auth_session.dart';
 import '../providers/auth_controller.dart';
 import '../providers/auth_state.dart';
 
-/// Shown while the admin hasn't approved the broker (or has suspended them).
-/// Once approved, "Check status" updates the auth state and the router
-/// redirect takes the broker home.
 class PendingApprovalPage extends ConsumerStatefulWidget {
   const PendingApprovalPage({super.key});
 

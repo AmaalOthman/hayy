@@ -54,7 +54,6 @@ class AuthRepositoryImpl implements AuthRepository {
 
   @override
   Future<Result<void>> logout() async {
-    // Best effort: the server may be unreachable, but the device logs out anyway.
     await guard(() => _remote.logout());
     return guard(() => _local.clear());
   }
