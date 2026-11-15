@@ -7,19 +7,19 @@ import '../constants/app_constants.dart';
 import '../error/exceptions.dart';
 import '../services/secure_storage_service.dart';
 import 'auth_interceptor.dart';
+import 'mock/mock_api_adapter.dart';
 
 final apiClientProvider = Provider<ApiClient>((ref) {
   final sessionExpired = ref.watch(sessionExpiredProvider);
   final client = ApiClient.create(
     storage: ref.watch(secureStorageServiceProvider),
     onSessionExpired: () => sessionExpired.add(null),
+    adapter: ApiEndpoints.useMockApi ? MockApiAdapter() : null,
   );
   ref.onDispose(client.close);
   return client;
 });
 
-/// Thin wrapper over Dio. Returns the response body, or throws an
-/// [AppException]. Remote datasources are the only callers.
 class ApiClient {
   ApiClient._(this._dio, this._plainDio);
 
@@ -27,7 +27,7 @@ class ApiClient {
     required SecureStorageService storage,
     required void Function() onSessionExpired,
     String baseUrl = ApiEndpoints.baseUrl,
-    HttpClientAdapter? adapter, // tests inject a fake here
+    HttpClientAdapter? adapter, // mock backend or a test fake
   }) {
     final baseOptions = BaseOptions(
       baseUrl: baseUrl,

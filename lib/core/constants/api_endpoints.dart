@@ -1,13 +1,15 @@
-/// Paths are a proposal; align them with the backend once its API is defined.
+import 'package:flutter/foundation.dart';
+
 abstract final class ApiEndpoints {
-  /// Override per build: `flutter run --dart-define=API_BASE_URL=https://...`
-  /// Default points at localhost from the Android emulator.
+ static const bool useMockApi =
+      bool.fromEnvironment('USE_MOCK_API', defaultValue: !kReleaseMode);
+
   static const String baseUrl = String.fromEnvironment(
     'API_BASE_URL',
     defaultValue: 'http://10.0.2.2:3000/api/v1',
   );
 
-  // Auth (public: send with skipAuth)
+  // Auth 
   static const String sendOtp = '/auth/otp/send';
   static const String verifyOtp = '/auth/otp/verify';
   static const String refreshToken = '/auth/refresh';

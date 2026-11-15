@@ -81,6 +81,55 @@ class AppLocalizationsAr extends AppLocalizations {
   String get logout => 'تسجيل الخروج';
 
   @override
+  String get completeProfileTitle => 'أكمل ملفك الشخصي';
+
+  @override
+  String get completeProfileSubtitle =>
+      'يظهر ملفك للوسطاء مع كل منشور تشاركه، ويستخدمه فريقنا لاعتماد حسابك.';
+
+  @override
+  String get editProfileTitle => 'تعديل الملف الشخصي';
+
+  @override
+  String get fullNameLabel => 'الاسم الكامل';
+
+  @override
+  String get agencyLabel => 'اسم الوكالة';
+
+  @override
+  String get whatsappLabel => 'رقم واتساب';
+
+  @override
+  String get whatsappHelper => 'سيتواصل معك الوسطاء على هذا الرقم.';
+
+  @override
+  String get addPhoto => 'إضافة صورة';
+
+  @override
+  String get changePhoto => 'تغيير الصورة';
+
+  @override
+  String get photoFromCamera => 'التقاط صورة';
+
+  @override
+  String get photoFromGallery => 'اختيار من المعرض';
+
+  @override
+  String get saveAndContinue => 'حفظ ومتابعة';
+
+  @override
+  String get save => 'حفظ';
+
+  @override
+  String get profileSaved => 'تم حفظ الملف الشخصي';
+
+  @override
+  String get errorFullName => 'أدخل اسمك الكامل';
+
+  @override
+  String get errorAgency => 'أدخل اسم الوكالة';
+
+  @override
   String get homeTitle => 'المجتمعات';
 
   @override

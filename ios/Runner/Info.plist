@@ -66,5 +66,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>Hayy uses the camera to take your profile photo.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Hayy needs access to your photos to set your profile photo.</string>
 </dict>
 </plist>

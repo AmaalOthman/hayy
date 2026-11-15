@@ -31,6 +31,23 @@
   "stillPending": "Still under review. We'll notify you once approved.",
   "logout": "Log out",
 
+  "completeProfileTitle": "Complete your profile",
+  "completeProfileSubtitle": "Brokers see this on every post you share, and our team uses it to approve your account.",
+  "editProfileTitle": "Edit profile",
+  "fullNameLabel": "Full name",
+  "agencyLabel": "Agency name",
+  "whatsappLabel": "WhatsApp number",
+  "whatsappHelper": "Brokers will contact you on this number.",
+  "addPhoto": "Add photo",
+  "changePhoto": "Change photo",
+  "photoFromCamera": "Take a photo",
+  "photoFromGallery": "Choose from gallery",
+  "saveAndContinue": "Save and continue",
+  "save": "Save",
+  "profileSaved": "Profile saved",
+  "errorFullName": "Enter your full name",
+  "errorAgency": "Enter your agency name",
+
   "homeTitle": "Communities",
   "homeEmpty": "Communities you join will appear here.",
 

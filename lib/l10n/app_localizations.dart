@@ -236,6 +236,102 @@ abstract class AppLocalizations {
   /// **'Log out'**
   String get logout;
 
+  /// No description provided for @completeProfileTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Complete your profile'**
+  String get completeProfileTitle;
+
+  /// No description provided for @completeProfileSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Brokers see this on every post you share, and our team uses it to approve your account.'**
+  String get completeProfileSubtitle;
+
+  /// No description provided for @editProfileTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit profile'**
+  String get editProfileTitle;
+
+  /// No description provided for @fullNameLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Full name'**
+  String get fullNameLabel;
+
+  /// No description provided for @agencyLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Agency name'**
+  String get agencyLabel;
+
+  /// No description provided for @whatsappLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'WhatsApp number'**
+  String get whatsappLabel;
+
+  /// No description provided for @whatsappHelper.
+  ///
+  /// In en, this message translates to:
+  /// **'Brokers will contact you on this number.'**
+  String get whatsappHelper;
+
+  /// No description provided for @addPhoto.
+  ///
+  /// In en, this message translates to:
+  /// **'Add photo'**
+  String get addPhoto;
+
+  /// No description provided for @changePhoto.
+  ///
+  /// In en, this message translates to:
+  /// **'Change photo'**
+  String get changePhoto;
+
+  /// No description provided for @photoFromCamera.
+  ///
+  /// In en, this message translates to:
+  /// **'Take a photo'**
+  String get photoFromCamera;
+
+  /// No description provided for @photoFromGallery.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose from gallery'**
+  String get photoFromGallery;
+
+  /// No description provided for @saveAndContinue.
+  ///
+  /// In en, this message translates to:
+  /// **'Save and continue'**
+  String get saveAndContinue;
+
+  /// No description provided for @save.
+  ///
+  /// In en, this message translates to:
+  /// **'Save'**
+  String get save;
+
+  /// No description provided for @profileSaved.
+  ///
+  /// In en, this message translates to:
+  /// **'Profile saved'**
+  String get profileSaved;
+
+  /// No description provided for @errorFullName.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your full name'**
+  String get errorFullName;
+
+  /// No description provided for @errorAgency.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your agency name'**
+  String get errorAgency;
+
   /// No description provided for @homeTitle.
   ///
   /// In en, this message translates to:
