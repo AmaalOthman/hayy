@@ -1,0 +1,12 @@
+import '../../../../core/error/result.dart';
+import '../../../../core/usecase/usecase.dart';
+import '../repositories/auth_repository.dart';
+
+/// Params: phone number in E.164.
+class SendOtp implements UseCase<void, String> {
+  const SendOtp(this._repository);
+  final AuthRepository _repository;
+
+  @override
+  Future<Result<void>> call(String phone) => _repository.sendOtp(phone);
+}

@@ -1,0 +1,42 @@
+{
+  "@@locale": "en",
+  "appTitle": "Hayy",
+
+  "splashTagline": "The unified platform for brokers",
+  "splashOffline": "We couldn't reach Hayy. Check your connection.",
+  "retry": "Try again",
+
+  "loginTitle": "Welcome to Hayy",
+  "loginSubtitle": "Sign in with your mobile number to join your brokers community.",
+  "phoneLabel": "Mobile number",
+  "continueButton": "Continue",
+  "loginTerms": "Hayy is for licensed real estate brokers only.",
+
+  "otpTitle": "Verify your number",
+  "otpSubtitle": "Enter the 6-digit code we sent to",
+  "verifyButton": "Verify",
+  "otpResendIn": "Resend code in {seconds}s",
+  "@otpResendIn": {
+    "placeholders": { "seconds": { "type": "int" } }
+  },
+  "otpResend": "Resend code",
+  "otpSent": "A new code is on its way",
+  "changeNumber": "Change number",
+
+  "pendingTitle": "Your account is under review",
+  "pendingBody": "We verify every broker to keep Hayy brokers-only. We'll let you know as soon as you're approved.",
+  "suspendedTitle": "Your account is suspended",
+  "suspendedBody": "Contact Hayy support to restore your access.",
+  "checkStatus": "Check status",
+  "stillPending": "Still under review. We'll notify you once approved.",
+  "logout": "Log out",
+
+  "homeTitle": "Communities",
+  "homeEmpty": "Communities you join will appear here.",
+
+  "errorNetwork": "No internet connection.",
+  "errorGeneric": "Something went wrong. Please try again.",
+  "errorSessionExpired": "Your session has expired. Please sign in again.",
+  "errorInvalidPhone": "Enter a valid mobile number",
+  "errorInvalidOtp": "Enter the 6-digit code"
+}
